@@ -1,5 +1,6 @@
 /* QUESTION CARD */
 .quest-card {
+  min-height: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -38,11 +39,21 @@
 .answer-btn {
   width: fit-content;
   padding: 10px 20px;
+  border: transparent 1px solid;
   border-radius: 4px;
   background-color: var(--theme-color);
   color: var(--main-white);
   text-decoration: none;
   align-self: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.answer-btn:active {
+  border: var(--theme-color) 1px solid;
+  border-radius: 4px;
+  background-color: var(--main-white);
+  color: var(--theme-color);
 }
 
 .tagList {

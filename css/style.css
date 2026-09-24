@@ -285,6 +285,7 @@ h4 {
 
 p,
 a,
+button,
 li {
   font-size: clamp(14px, 2vw, 18px);
   font-family: "PP Neue Montreal", system-ui, sans-serif;
