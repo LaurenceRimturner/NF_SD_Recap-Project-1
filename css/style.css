@@ -1,13 +1,21 @@
 @import "./fonts.css";
 @import "./navbar.css";
 @import "./header.css";
+@import "./profile.css";
 @import "./question-cards.css";
+@import "./darkmode_switch.css";
 
 :root {
   --theme-color: #2c55d8;
   --main-font-color: #2c2c2c;
   --main-white: #fdfdfd;
 }
+/* 
+:root:has(#theme-toggle:checked) {
+  --theme-color: #8fa8ff;
+  --main-font-color: #f2f2f2;
+  --main-white: #161616;
+} */
 
 *,
 ::before,
@@ -55,134 +63,6 @@ main {
 }
 
 /* Responsive breakpoints */
-
-@media screen and (min-width: 576px) {
-  .col-xsm-1 {
-    width: 8.333%;
-    max-width: 8.333%;
-  }
-
-  .col-xsm-2 {
-    width: 16.666%;
-    max-width: 16.666%;
-  }
-
-  .col-xsm-3 {
-    width: 25%;
-    max-width: 25%;
-  }
-
-  .col-xsm-4 {
-    width: 33.333%;
-    max-width: 33.333%;
-  }
-
-  .col-xsm-5 {
-    width: 41.666%;
-    max-width: 41.666%;
-  }
-
-  .col-xsm-6 {
-    width: 50%;
-    max-width: 50%;
-  }
-
-  .col-xsm-7 {
-    width: 58.333%;
-    max-width: 58.333%;
-  }
-
-  .col-xsm-8 {
-    width: 66.666%;
-    max-width: 66.666%;
-  }
-
-  .col-xsm-9 {
-    width: 75%;
-    max-width: 75%;
-  }
-
-  .col-xsm-10 {
-    width: 83.333%;
-    max-width: 83.333%;
-  }
-
-  .col-xsm-11 {
-    width: 91.666%;
-    max-width: 91.666%;
-  }
-
-  .col-xsm-12 {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .row {
-    flex-direction: row;
-  }
-
-  .col-sm-1 {
-    width: 8.333%;
-    max-width: 8.333%;
-  }
-
-  .col-sm-2 {
-    width: 16.666%;
-    max-width: 16.666%;
-  }
-
-  .col-sm-3 {
-    width: 25%;
-    max-width: 25%;
-  }
-
-  .col-sm-4 {
-    width: 33.333%;
-    max-width: 33.333%;
-  }
-
-  .col-sm-5 {
-    width: 41.666%;
-    max-width: 41.666%;
-  }
-
-  .col-sm-6 {
-    width: 50%;
-    max-width: 50%;
-  }
-
-  .col-sm-7 {
-    width: 58.333%;
-    max-width: 58.333%;
-  }
-
-  .col-sm-8 {
-    width: 66.666%;
-    max-width: 66.666%;
-  }
-
-  .col-sm-9 {
-    width: 75%;
-    max-width: 75%;
-  }
-
-  .col-sm-10 {
-    width: 83.333%;
-    max-width: 83.333%;
-  }
-
-  .col-sm-11 {
-    width: 91.666%;
-    max-width: 91.666%;
-  }
-
-  .col-sm-12 {
-    width: 100%;
-    max-width: 100%;
-  }
-}
 
 @media screen and (min-width: 992px) {
   .col-md-1 {
@@ -376,15 +256,6 @@ main {
 
 /* UITLITY */
 
-.d-flex {
-  display: flex;
-}
-
-.d-flex--just-c {
-  display: flex;
-  justify-content: center;
-}
-
 .is_active svg {
   fill: var(--main-font-color);
 }
@@ -403,6 +274,12 @@ h3 {
   font-size: clamp(24px, 5vw, 40px);
   color: var(--main-font-color);
   font-family: "Crimson Pro", Georgia, serif;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: clamp(20px, 5vw, 30px);
+  font-family: "PP Neue Montreal", system-ui, sans-serif;
   font-weight: 700;
 }
 
