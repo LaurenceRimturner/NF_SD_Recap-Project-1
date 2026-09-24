@@ -1,0 +1,9 @@
+header {
+  position: fixed;
+  width: 100%;
+}
+
+header > div {
+  background-color: var(--theme-color);
+  padding: calc(var(--gap) / 2) 0;
+}
