@@ -3,9 +3,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  /* gap: 3rem; */
   background-color: rgba(44, 85, 216, 0.1);
-  padding: 1rem;
+  padding: var(--gap);
   border-radius: 4px;
 }
 
@@ -23,6 +22,7 @@
 
 .quest-card-wrapper-FAQ h3 {
   position: relative;
+  max-width: 90%;
   &::after {
     content: "";
     position: absolute;
@@ -42,6 +42,7 @@
   background-color: var(--theme-color);
   color: var(--main-white);
   text-decoration: none;
+  align-self: center;
 }
 
 .tagList {
