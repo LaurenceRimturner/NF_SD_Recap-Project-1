@@ -1,7 +1,7 @@
 /* PP Neue Montreal */
 @font-face {
   font-family: "PP Neue Montreal";
-  src: url("../fonts/PPNEUEMONTREAL-THIN.OTF") format("opentype");
+  src: url("../assets/fonts/PPNEUEMONTREAL-THIN.OTF") format("opentype");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: "PP Neue Montreal";
-  src: url("../fonts/PPNEUEMONTREAL-BOOK.OTF") format("opentype");
+  src: url("../assets/fonts/PPNEUEMONTREAL-BOOK.OTF") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: "PP Neue Montreal";
-  src: url("../fonts/PPNEUEMONTREAL-ITALIC.OTF") format("opentype");
+  src: url("../assets/fonts/PPNEUEMONTREAL-ITALIC.OTF") format("opentype");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -25,7 +25,7 @@
 
 @font-face {
   font-family: "PP Neue Montreal";
-  src: url("../fonts/PPNEUEMONTREAL-MEDIUM.OTF") format("opentype");
+  src: url("../assets/fonts/PPNEUEMONTREAL-MEDIUM.OTF") format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -33,7 +33,8 @@
 
 @font-face {
   font-family: "PP Neue Montreal";
-  src: url("../fonts/PPNEUEMONTREAL-SEMIBOLDITALIC.OTF") format("opentype");
+  src: url("../assets/fonts/PPNEUEMONTREAL-SEMIBOLDITALIC.OTF")
+    format("opentype");
   font-weight: 600;
   font-style: italic;
   font-display: swap;
@@ -41,16 +42,16 @@
 
 @font-face {
   font-family: "PP Neue Montreal";
-  src: url("../fonts/PPNEUEMONTREAL-BOLD.OTF") format("opentype");
+  src: url("../assets/fonts/PPNEUEMONTREAL-BOLD.OTF") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
-/* Crimson Pro (Variable Fonts: eine Datei deckt einen ganzen Gewichtsbereich ab) */
 @font-face {
   font-family: "Crimson Pro";
-  src: url("../fonts/CrimsonPro-VariableFont_wght.ttf") format("truetype");
+  src: url("../assets/fonts/CrimsonPro-VariableFont_wght.ttf")
+    format("truetype");
   font-weight: 200 900;
   font-style: normal;
   font-display: swap;
@@ -58,7 +59,7 @@
 
 @font-face {
   font-family: "Crimson Pro";
-  src: url("../fonts/CrimsonPro-Italic-VariableFont_wght.ttf")
+  src: url("../assets/fonts/CrimsonPro-Italic-VariableFont_wght.ttf")
     format("truetype");
   font-weight: 200 900;
   font-style: italic;
