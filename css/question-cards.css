@@ -1,0 +1,25 @@
+/* QUESTION CARD */
+.quest-card {
+  background-color: rgba(44, 85, 216, 0.1);
+  padding: 1rem;
+  border-radius: 4px;
+}
+.quest-card-wrapper-FAQ {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--gap);
+}
+
+.quest-card-wrapper-FAQ h3 {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 50%;
+    height: 3px;
+    border-radius: 4px;
+    background-color: var(--theme-color);
+  }
+}

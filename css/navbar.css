@@ -2,9 +2,6 @@
 
 :root {
   --gap: 2rem;
-  --theme-color: #2c55d8;
-  --main-font-color: #2c2c2c;
-  --main-white: #fdfdfd;
 }
 
 .navbar {
