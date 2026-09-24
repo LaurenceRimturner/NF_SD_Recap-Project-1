@@ -10,3 +10,8 @@ header > div {
   background-color: var(--theme-color);
   padding: calc(var(--gap) / 2) 0;
 }
+
+.app_title {
+  display: flex;
+  justify-content: center;
+}
