@@ -6,6 +6,7 @@
   background-color: rgba(44, 85, 216, 0.1);
   padding: var(--gap);
   border-radius: 4px;
+  height: 100%;
 }
 
 .quest-card-wrapper-FAQ {
