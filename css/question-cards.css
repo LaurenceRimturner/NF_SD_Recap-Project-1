@@ -1,9 +1,20 @@
 /* QUESTION CARD */
 .quest-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* gap: 3rem; */
   background-color: rgba(44, 85, 216, 0.1);
   padding: 1rem;
   border-radius: 4px;
 }
+
+.quest-card a:has(svg) {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .quest-card-wrapper-FAQ {
   display: flex;
   flex-flow: column nowrap;
@@ -17,9 +28,33 @@
     position: absolute;
     bottom: -15px;
     left: 0;
-    width: 50%;
+    width: 100%;
     height: 3px;
     border-radius: 4px;
     background-color: var(--theme-color);
   }
+}
+
+.answer-btn {
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: var(--theme-color);
+  color: var(--main-white);
+  text-decoration: none;
+}
+
+.tagList {
+  display: flex;
+  flex-flow: row wrap;
+  gap: calc(var(--gap) / 3);
+}
+
+.tag {
+  padding: 5px 10px;
+  border: var(--theme-color) 2px solid;
+  border-radius: 50px;
+  list-style: none;
+  font-weight: 300;
+  font-style: italic;
 }
