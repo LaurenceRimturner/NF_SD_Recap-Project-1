@@ -3,6 +3,7 @@
 @import "./header.css";
 @import "./profile.css";
 @import "./question-cards.css";
+@import "./bookmarks.css";
 @import "./darkmode_switch.css";
 
 :root {

@@ -1,0 +1,26 @@
+/* Deine originale Positionierung */
+.quest-card .fav-icon-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.fav-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.fav-icon-label svg {
+  fill: transparent;
+  stroke: var(--theme-color);
+  stroke-width: 75px;
+  stroke-linejoin: round;
+  transition: all 0.2s ease;
+}
+
+.fav-checkbox:checked + .fav-icon-label svg {
+  fill: var(--theme-color);
+}
