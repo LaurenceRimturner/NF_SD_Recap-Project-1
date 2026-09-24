@@ -1,6 +1,13 @@
 @import "./fonts.css";
 @import "./navbar.css";
 @import "./header.css";
+@import "./question-cards.css";
+
+:root {
+  --theme-color: #2c55d8;
+  --main-font-color: #2c2c2c;
+  --main-white: #fdfdfd;
+}
 
 *,
 ::before,
@@ -15,6 +22,10 @@ html {
   scroll-behavior: smooth;
   height: 200vh;
   background-color: var(--main-white);
+}
+
+main {
+  margin-top: 150px;
 }
 
 /* Structure */
@@ -374,6 +385,10 @@ html {
   justify-content: center;
 }
 
+.is_active svg {
+  fill: var(--main-font-color);
+}
+
 /* Fonts */
 
 h1,
@@ -384,4 +399,19 @@ h2 {
   font-weight: 700; */
   font-family: "PP Neue Montreal", system-ui, sans-serif;
   font-weight: 700;
+}
+
+h3 {
+  font-size: clamp(32px, 5vw, 48px);
+  color: var(--main-font-color);
+  font-family: "Crimson Pro", Georgia, serif;
+  font-weight: 700;
+}
+
+p,
+a,
+li {
+  font-family: "PP Neue Montreal", system-ui, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
