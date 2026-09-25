@@ -40,8 +40,7 @@ main {
 /* Structure */
 
 .section {
-  padding: 15vh 0;
-  scroll-margin-top: 10vh;
+  margin: 150px auto;
 }
 
 .container {
@@ -265,7 +264,7 @@ main {
 
 h1,
 h2 {
-  font-size: clamp(48px, 4vw, 90px);
+  font-size: clamp(48px, 4vw, 70px);
   color: var(--main-white);
   font-family: "PP Neue Montreal", system-ui, sans-serif;
   font-weight: 700;
