@@ -7,9 +7,16 @@
 }
 
 .profile-introdution {
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   gap: var(--gap);
+}
+
+@media screen and (min-width: 900px) {
+  .profile-introdution {
+    flex-direction: row;
+  }
 }
 
 .profile-about {
