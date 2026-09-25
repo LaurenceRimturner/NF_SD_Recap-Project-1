@@ -12,7 +12,9 @@
 .quest-card-wrapper-FAQ {
   display: flex;
   flex-flow: column nowrap;
-  gap: var(--gap);
+  justify-content: space-between;
+  height: 100%;
+  gap: calc(var(--gap) * 1.25);
 }
 
 .quest-card-wrapper-FAQ h3 {
@@ -41,6 +43,7 @@
   align-self: center;
   cursor: pointer;
   transition: all 0.2s ease;
+  margin-top: auto;
 }
 
 .answer-btn:active {
@@ -63,4 +66,10 @@
   list-style: none;
   font-weight: 300;
   font-style: italic;
+}
+
+@media screen and (min-width: 1200px) {
+  .quest-card {
+    min-height: 500px;
+  }
 }
