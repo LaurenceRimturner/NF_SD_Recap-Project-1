@@ -33,7 +33,7 @@
 }
 
 .quest-card-answer-wrapper {
-  background-color: white;
+  background-color: var(--main-white);
   padding: 1rem;
   border-radius: 4px;
   text-align: center;
