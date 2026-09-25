@@ -1,4 +1,4 @@
-.profile-introdution,
+.personal_infomation,
 .profile-about,
 .darkmode_switch-wrapper,
 .profile-counts-wrapper,
@@ -6,15 +6,14 @@
   display: flex;
 }
 
-.profile-introdution {
+.personal_infomation {
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
   gap: var(--gap);
 }
 
 @media screen and (min-width: 900px) {
-  .profile-introdution {
+  .personal_infomation {
     flex-direction: row;
   }
 }
@@ -23,6 +22,9 @@
   flex-direction: column;
   align-items: start;
   gap: calc(var(--gap) / 2);
+  background-color: rgba(44, 85, 216, 0.1);
+  padding: var(--gap);
+  border-radius: 4px;
 }
 
 .profile-counts-wrapper {
