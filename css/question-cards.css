@@ -32,6 +32,13 @@
   }
 }
 
+.quest-card-answer-wrapper {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
 .answer-btn {
   width: fit-content;
   padding: 10px 20px;
