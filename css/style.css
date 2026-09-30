@@ -29,7 +29,6 @@
 
 html {
   scroll-behavior: smooth;
-  /* height: 200vh; */
   background-color: var(--main-white);
 }
 
@@ -260,6 +259,14 @@ main {
   fill: var(--main-font-color);
 }
 
+.is_hidden--top {
+  top: -100%;
+}
+
+.is_hidden--bottom {
+  bottom: -100%;
+}
+
 /* Fonts */
 
 h1,
@@ -291,4 +298,5 @@ li {
   font-family: "PP Neue Montreal", system-ui, sans-serif;
   font-weight: 500;
   letter-spacing: 0.5px;
+  line-height: 1.6;
 }
