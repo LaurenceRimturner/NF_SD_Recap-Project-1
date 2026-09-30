@@ -5,8 +5,23 @@
   flex-direction: column;
   background-color: rgba(44, 85, 216, 0.1);
   padding: var(--gap);
+  transition:
+    all 0.25s ease,
+    border 0.25s ease;
+  border: 4px transparent solid;
   border-radius: 4px;
   height: 100%;
+}
+
+.quest-card:has(.faved) {
+  background: linear-gradient(
+    45deg,
+    rgba(44, 85, 216, 0.5),
+    rgba(44, 85, 216, 0.1)
+  );
+  border: var(--theme-color) solid 4px;
+  box-shadow: rgba(44, 44, 44, 0.5) 5px 5px 15px;
+  transform: scale(1.01);
 }
 
 .quest-card-wrapper-FAQ {
