@@ -1,0 +1,19 @@
+form,
+.questionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap);
+}
+
+form button {
+  width: fit-content;
+}
+
+form textarea,
+form text {
+  field-sizing: content;
+  min-height: 5lh;
+  width: 100%;
+}

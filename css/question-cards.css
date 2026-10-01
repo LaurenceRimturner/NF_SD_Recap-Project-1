@@ -20,7 +20,7 @@
     rgba(44, 85, 216, 0.1)
   );
   border: var(--theme-color) solid 4px;
-  box-shadow: rgba(44, 44, 44, 0.5) 5px 5px 15px;
+  box-shadow: rgba(44, 44, 44, 0.3) 2px 2px 15px;
   transform: scale(1.01);
 }
 
@@ -52,10 +52,15 @@
   padding: 1rem;
   border-radius: 4px;
   text-align: center;
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .answer-btn {
-  width: fit-content;
+  width: 40%;
   padding: 10px 20px;
   border: transparent 1px solid;
   border-radius: 4px;
