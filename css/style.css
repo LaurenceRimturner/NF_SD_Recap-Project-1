@@ -12,12 +12,12 @@
   --main-font-color: #2c2c2c;
   --main-white: #fdfdfd;
 }
-/* 
-:root:has(#theme-toggle:checked) {
-  --theme-color: #8fa8ff;
+
+:root:has(#input:checked) {
+  --theme-color: #2c55d8;
   --main-font-color: #f2f2f2;
   --main-white: #161616;
-} */
+}
 
 *,
 ::before,
@@ -294,10 +294,16 @@ h4 {
 p,
 a,
 button,
-li {
+li,
+form label,
+form textarea,
+form input[type="text"] {
   font-size: clamp(14px, 2vw, 18px);
   font-family: "PP Neue Montreal", system-ui, sans-serif;
   font-weight: 500;
   letter-spacing: 0.5px;
   line-height: 1.6;
+}
+form label {
+  font-weight: 900;
 }

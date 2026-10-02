@@ -1,20 +1,3 @@
-// SHOW ANSWER BTN
-
-const buttons = document.querySelectorAll(".answer-btn");
-
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const card = button.closest(".quest-card");
-    const answerContainer = card.querySelector('[data-js="answerWrapper"]');
-
-    if (answerContainer) {
-      answerContainer.classList.toggle("hidden");
-      const isHidden = answerContainer.classList.contains("hidden");
-      button.textContent = isHidden ? "Show answer" : "Hide answer";
-    }
-  });
-});
-
 // SCROLL BEHAVIOUR - KI
 
 const navbar = document.querySelector(".navbar");
@@ -40,7 +23,24 @@ window.addEventListener("scroll", () => {
   lastScrollY = currentScrollY;
 });
 
-// DYNAMISCHE ID/FOR BOOKMARKS
+// SHOW ANSWER BTN
+
+const buttons = document.querySelectorAll(".answer-btn");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const card = button.closest(".quest-card");
+    const answerContainer = card.querySelector('[data-js="answerWrapper"]');
+
+    if (answerContainer) {
+      answerContainer.classList.toggle("hidden");
+      const isHidden = answerContainer.classList.contains("hidden");
+      button.textContent = isHidden ? "Show answer" : "Hide answer";
+    }
+  });
+});
+
+// DYNAMISCHE ID/FOR BOOKMARKS STARTSEITE
 
 const QuestionCards = document.querySelectorAll(".quest-card");
 
@@ -71,6 +71,44 @@ const questionContainer = document.querySelector(
 const answerInput = document.querySelector('[data-js="answerInput"]');
 const questionInput = document.querySelector('[data-js="questionInput"]');
 const tagInput = document.querySelector('[data-js="tagInput"]');
+const charLeftQuest = document.querySelector('[data-js="charLeftQuest"]');
+const charLeftAnswer = document.querySelector('[data-js="charLeftAnswer"]');
+
+let charLeftQuestStartLenght = questionInput.value.length;
+let charLeftAnswerStartLenght = answerInput.value.length;
+
+charLeftQuest.textContent =
+  `${150 - charLeftQuestStartLenght}` + " charakters left.";
+
+charLeftAnswer.textContent =
+  `${150 - charLeftAnswerStartLenght}` + " charakters left.";
+
+// CHARACTER LEFT
+
+questionInput.addEventListener("input", () => {
+  const questionInputValue = questionInput.value.length;
+  const questionInputMaxLenght = questionInput.maxLength;
+  charLeftQuest.textContent =
+    `${questionInputMaxLenght - questionInputValue}` + " charakters left.";
+  if (questionInputValue === questionInputMaxLenght) {
+    charLeftQuest.style.color = "#ff6e6e";
+  } else {
+    charLeftQuest.style.color = "";
+  }
+});
+answerInput.addEventListener("input", () => {
+  const answerInputValue = answerInput.value.length;
+  const answerInputMaxLenght = answerInput.maxLength;
+  charLeftAnswer.textContent =
+    `${answerInputMaxLenght - answerInputValue}` + " charakters left.";
+  if (answerInputValue === answerInputMaxLenght) {
+    charLeftAnswer.style.color = "#ff6e6e";
+  } else {
+    charLeftAnswer.style.color = "";
+  }
+});
+
+// QUESTIONCARD ERSTELLEN
 
 let cardCounter = 0;
 
@@ -120,6 +158,13 @@ function createCard() {
   labelEl.setAttribute("aria-label", "Frage als Favorit speichern");
   labelEl.htmlFor = `fav-${cardCounter}`;
 
+  labelEl.innerHTML = `
+    <svg xmlns="http://w3.org" height="50px" viewBox="0 -960 960 960" width="50px">
+      <path d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Z"></path>
+    </svg>
+  `;
+
+  // BOOKMARK EVENT
   inputEl.addEventListener("click", () => {
     if (inputEl.checked) {
       inputEl.classList.add("faved");
@@ -128,17 +173,7 @@ function createCard() {
     }
   });
 
-  // SVG
-  labelEl.innerHTML = `
-    <svg xmlns="http://w3.org" height="50px" viewBox="0 -960 960 960" width="50px">
-      <path d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Z"></path>
-    </svg>
-  `;
-
-  // Zusammensetzten der Els oben
-  wrapper.append(tagList, heading, answerWrapper, button);
-
-  // EVENT BTN
+  // ANSWER BTN EVENT
   button.addEventListener("click", () => {
     answerWrapper.classList.toggle("hidden");
     button.textContent = answerWrapper.classList.contains("hidden")
@@ -146,10 +181,15 @@ function createCard() {
       : "Hide answer";
   });
 
-  // 6. Alles in die Hauptkarte einfügen und im DOM platzieren
-  newCard.append(wrapper, inputEl, labelEl);
-  questionContainer.append(newCard);
+  // WRAPPER BAUEN
+  wrapper.append(tagList, heading, answerWrapper, button);
+
+  // NEWCARD BAUEN
+  newCard.prepend(wrapper, inputEl, labelEl);
+  questionContainer.prepend(newCard);
 }
+
+// FORM ADD
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -164,6 +204,3 @@ form.addEventListener("submit", (e) => {
   createCard();
   form.reset();
 });
-
-// RMV BTN
-// EDT BTN

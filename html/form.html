@@ -88,34 +88,48 @@
           <div class="row">
             <div class="col col-md-12 col-lg-12 col-xl-12">
               <form data-js="form">
-                <label for="question">Your question</label>
-                <textarea
-                  id="question"
-                  name="questionInput"
-                  data-js="questionInput"
-                  maxlength="150"
-                >
-Was ist das Thema der letzten Mario kart Strecke?</textarea
-                >
-                <label for="answer">Your answer</label>
-                <textarea
-                  id="answer"
-                  name="answerInput"
-                  data-js="answerInput"
-                  maxlength="150"
-                >
-Regenbogen</textarea
-                >
-                <label for="tag">Tag</label>
-                <input
-                  type="text"
-                  id="tag"
-                  name="tagInput"
-                  data-js="tagInput"
-                  value="Gaming"
-                />
+                <h3>Add New Question</h3>
+                <div class="createQuestWrapper">
+                  <label for="question">Your question</label>
+                  <textarea
+                    id="question"
+                    name="questionInput"
+                    data-js="questionInput"
+                    maxlength="150"
+                    placeholder="Enter Question .."
+                  >
+Welche Strecke in Mario Kart ist in jedem Spezial-Cup das Finale?</textarea
+                  >
+                  <p data-js="charLeftQuest"></p>
+                </div>
+                <div class="createAnswerWrapper">
+                  <label for="answer">Your answer</label>
+                  <textarea
+                    id="answer"
+                    name="answerInput"
+                    data-js="answerInput"
+                    maxlength="150"
+                    placeholder="Enter Answer .."
+                  >
+Regenbogen-Boulevard</textarea
+                  >
+                  <p data-js="charLeftAnswer">150 charakters left.</p>
+                </div>
+                <div class="createTagList">
+                  <label for="tag">Tag</label>
+                  <input
+                    type="text"
+                    id="tag"
+                    name="tagInput"
+                    data-js="tagInput"
+                    value="Gaming"
+                    placeholder="Add Tag .."
+                  />
+                </div>
                 <button type="submit" class="submit-btn">Submit</button>
               </form>
+            </div>
+            <div class="col col-md-12 col-lg-12 col-xl-12">
               <div class="questionContainer" data-js="questionContainer"></div>
             </div>
           </div>
