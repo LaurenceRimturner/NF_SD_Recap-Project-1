@@ -74,35 +74,40 @@ const tagInput = document.querySelector('[data-js="tagInput"]');
 const charLeftQuest = document.querySelector('[data-js="charLeftQuest"]');
 const charLeftAnswer = document.querySelector('[data-js="charLeftAnswer"]');
 
-let charLeftQuestStartLenght = questionInput.value.length;
-let charLeftAnswerStartLenght = answerInput.value.length;
+const questionInputValue = questionInput.value.length; //Current Length
+const questionInputMaxLength = questionInput.maxLength; //MaxLength: 150
+const answerInputValue = answerInput.value.length; //Current Length
+const answerInputMaxLength = answerInput.maxLength; //MaxLength: 150
 
-charLeftQuest.textContent =
-  `${150 - charLeftQuestStartLenght}` + " charakters left.";
+// SET COUNT TO 0
+function resetMaxLength() {
+  charLeftQuest.textContent =
+    `${questionInputMaxLength - questionInputValue}` + " characters left.";
 
-charLeftAnswer.textContent =
-  `${150 - charLeftAnswerStartLenght}` + " charakters left.";
+  charLeftAnswer.textContent =
+    `${answerInputMaxLength - answerInputValue}` + " characters left.";
+}
 
+resetMaxLength();
 // CHARACTER LEFT
 
 questionInput.addEventListener("input", () => {
-  const questionInputValue = questionInput.value.length;
-  const questionInputMaxLenght = questionInput.maxLength;
+  const currentLength = questionInput.value.length;
+
   charLeftQuest.textContent =
-    `${questionInputMaxLenght - questionInputValue}` + " charakters left.";
-  if (questionInputValue === questionInputMaxLenght) {
-    charLeftQuest.style.color = "#ff6e6e";
+    `${questionInputMaxLength - currentLength}` + " characters left.";
+  if (currentLength === questionInputMaxLength) {
+    charLeftQuest.style.color = "#d82c2c";
   } else {
     charLeftQuest.style.color = "";
   }
 });
 answerInput.addEventListener("input", () => {
-  const answerInputValue = answerInput.value.length;
-  const answerInputMaxLenght = answerInput.maxLength;
+  const currentLength = answerInput.value.length;
   charLeftAnswer.textContent =
-    `${answerInputMaxLenght - answerInputValue}` + " charakters left.";
-  if (answerInputValue === answerInputMaxLenght) {
-    charLeftAnswer.style.color = "#ff6e6e";
+    `${answerInputMaxLength - currentLength}` + " characters left.";
+  if (currentLength === answerInputMaxLength) {
+    charLeftAnswer.style.color = "#d82c2c";
   } else {
     charLeftAnswer.style.color = "";
   }
@@ -189,6 +194,26 @@ function createCard() {
   questionContainer.prepend(newCard);
 }
 
+// ERROR HANDLING
+const ErrorParagraph = document.querySelector('[data-js="Error-Message"]');
+const SuccessParagraph = document.querySelector('[data-js="Success-Message"]');
+
+function showError() {
+  ErrorParagraph.classList.remove("hidden");
+}
+
+function hideError() {
+  ErrorParagraph.classList.add("hidden");
+}
+
+function showSuccess() {
+  SuccessParagraph.classList.remove("hidden");
+}
+
+function hideSuccess() {
+  SuccessParagraph.classList.add("hidden");
+}
+
 // FORM ADD
 
 form.addEventListener("submit", (e) => {
@@ -200,7 +225,22 @@ form.addEventListener("submit", (e) => {
     tagValue: formElements.tagInput.value,
   };
 
-  console.log(formValues);
+  if (
+    formValues.questionValue === "" ||
+    formValues.answerValue === "" ||
+    formValues.tagValue === ""
+  ) {
+    showError();
+    hideSuccess();
+    return;
+  } else {
+    hideError();
+    showSuccess();
+
+    setTimeout(hideSuccess, 4000);
+  }
+
   createCard();
+  resetMaxLength();
   form.reset();
 });
