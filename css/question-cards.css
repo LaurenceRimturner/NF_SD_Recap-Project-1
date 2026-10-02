@@ -11,6 +11,7 @@
   border: 4px transparent solid;
   border-radius: 4px;
   height: 100%;
+  width: 100%;
 }
 
 .quest-card:has(.faved) {
@@ -35,6 +36,7 @@
 .quest-card-wrapper-FAQ h3 {
   position: relative;
   max-width: 90%;
+  overflow-wrap: break-word;
   &::after {
     content: "";
     position: absolute;
@@ -53,6 +55,7 @@
   border-radius: 4px;
   text-align: center;
   visibility: visible;
+  overflow-wrap: break-word;
 }
 
 .hidden {
