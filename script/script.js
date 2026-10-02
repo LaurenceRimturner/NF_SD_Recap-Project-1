@@ -232,6 +232,7 @@ form.addEventListener("submit", (e) => {
   ) {
     showError();
     hideSuccess();
+    setTimeout(hideError, 4000);
     return;
   } else {
     hideError();
