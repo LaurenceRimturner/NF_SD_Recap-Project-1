@@ -56,10 +56,12 @@
   text-align: center;
   visibility: visible;
   overflow-wrap: break-word;
+  display: block;
 }
 
 .hidden {
   visibility: hidden;
+  display: none;
 }
 
 .answer-btn {

@@ -7,8 +7,7 @@ form,
 .questionContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: var(--gap);
 }
 
@@ -37,13 +36,35 @@ form input[type="text"] {
   resize: none;
 }
 
+form textarea:focus-visible,
+form input[type="text"]:focus-visible {
+  outline: 3px solid var(--theme-color);
+  border-radius: 2px;
+}
+.succeedText,
+.errorText {
+  font-weight: 900;
+  padding: 0.25rem 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.errorText {
+  background-color: #d82c2c;
+  color: var(--main-white);
+}
+.succeedText {
+  color: var(--main-font-color);
+  background-color: #06b319;
+}
+
 form button {
   width: fit-content;
   border: 2px solid var(--main-white);
   background-color: var(--theme-color);
   color: var(--main-white);
-  border-radius: 2px solid;
-  padding: 10px 30px;
+  border-radius: 2px;
+  padding: 10px 50px;
   cursor: pointer;
   transition: all 0.25s ease;
   &:hover {

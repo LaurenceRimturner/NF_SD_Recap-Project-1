@@ -97,9 +97,7 @@
                     data-js="questionInput"
                     maxlength="150"
                     placeholder="Enter Question .."
-                  >
-Welche Strecke in Mario Kart ist in jedem Spezial-Cup das Finale?</textarea
-                  >
+                  ></textarea>
                   <p data-js="charLeftQuest"></p>
                 </div>
                 <div class="createAnswerWrapper">
@@ -110,9 +108,7 @@ Welche Strecke in Mario Kart ist in jedem Spezial-Cup das Finale?</textarea
                     data-js="answerInput"
                     maxlength="150"
                     placeholder="Enter Answer .."
-                  >
-Regenbogen-Boulevard</textarea
-                  >
+                  ></textarea>
                   <p data-js="charLeftAnswer">150 charakters left.</p>
                 </div>
                 <div class="createTagList">
@@ -122,11 +118,16 @@ Regenbogen-Boulevard</textarea
                     id="tag"
                     name="tagInput"
                     data-js="tagInput"
-                    value="Gaming"
                     placeholder="Add Tag .."
                   />
                 </div>
-                <button type="submit" class="submit-btn">Submit</button>
+                <p class="errorText hidden" data-js="Error-Message">
+                  Please complete the form.
+                </p>
+                <p class="succeedText hidden" data-js="Success-Message">
+                  Card successfully created!
+                </p>
+                <button type="submit" class="submit-btn">Create Card</button>
               </form>
             </div>
             <div class="col col-md-12 col-lg-12 col-xl-12">
