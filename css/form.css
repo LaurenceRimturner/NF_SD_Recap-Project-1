@@ -47,15 +47,14 @@ form input[type="text"]:focus-visible {
   padding: 0.25rem 2rem;
   text-align: center;
   width: 100%;
+  color: var(--main-white);
 }
 
 .errorText {
   background-color: #d82c2c;
-  color: var(--main-white);
 }
 .succeedText {
-  color: var(--main-font-color);
-  background-color: #06b319;
+  background-color: var(--theme-color);
 }
 
 form button {
